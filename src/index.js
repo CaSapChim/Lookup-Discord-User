@@ -1,6 +1,7 @@
 import express from "express";
 import axios from "axios";
 import cors from "cors";
+import config from "../config.json";
 
 const app = express();
 const port = 3001;
@@ -21,7 +22,7 @@ app.get("/api/user/:userId", async (req, res) => {
     try {
         const response = await axios.get(`https://discord.com/api/v10/users/${userId}`, {
           headers: {
-            Authorization: 'Bot MTE2NjIxODM3MDIyNDUwNDkwNA.Gwk7Lm.qsdagfLtYfeIG7KyZn6CtB9YUmN4dzfBFvXCuM',
+            Authorization: `Bot ${config.token}`,
           },
         });
     
