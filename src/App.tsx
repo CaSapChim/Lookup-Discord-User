@@ -4,7 +4,9 @@ import UserInfo from './components/UserInfo';
 
 const App: React.FC = () => {
   return (
-    <div className='container mx-auto p-4 flex h-screen w-full items-center justify-center bg-[#E6EFFA] '>
+    <div className='h-screen w-full bg-[#E6EFFA] '>
+        <h1 className='text-[#26c3eb] font-bold text-2xl text-center p-3'>Tìm kiếm thông tin người dùng Discord</h1>
+        <br />
       <UserInfo/>
     </div>
   );
